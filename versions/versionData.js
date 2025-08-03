@@ -8,7 +8,7 @@ for (var i = 0; i < verData.length; i++) {
     verData[i][2] +
     '"></iframe><h6><a href="https://studio.code.org/projects/gamelab/' +
     verData[i][2] +
-    '/embed?nosource">v' +
+    '/embed?nosource"target="_blank"rel="noopener noreferrer">v' +
     verData[i][0] +
     " - Released " +
     verData[i][1] +
