@@ -36,6 +36,9 @@ h6 > a:focus {
 a:active {
   color: green;
 }
+h6 > a:active {
+  color: green;
+}
 h6 > a {
   font-size: 20px;
 }
