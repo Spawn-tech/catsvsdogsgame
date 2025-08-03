@@ -65,14 +65,8 @@ iframe {
 #title {
   padding-left: 42.5px;
   padding-right: 42.5px;
-}
-#staticTitle {
-  position: relative;
-  display: block;
   margin: auto;
-  margin-top: 30px;
-  margin-left: -400px;
-  image-rendering: auto;
+  display: block;
 }
 #trailer {
   float: left;
