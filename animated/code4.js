@@ -212,16 +212,14 @@ window.preload = function () {
       dog1.x = width + 10;
       play.x = width / 2;
       play.scale = 0.45 + sin(0.3 * millis()) / 20;
-      //play.scale *= 1.3;
-      play.scale *= 5;
+      play.scale *= 1.3;
       drawSprites();
       updatePositions();
       push();
       translate(play.x, play.y);
-      fill(255, 0, 0);
-      ellipse(0, 0, 200, 200);
+      //fill(255, 0, 0);
+      //ellipse(0, 0, 200, 200);
       rotate(45);
-      //scale(1.3);
       noFill();
       var shiny = false;
       for (var i = -45; i <= 45; i += 9) {
@@ -238,7 +236,7 @@ window.preload = function () {
         cursor(HAND);
         if (mouseWentDown("leftButton")) {
           window.open(
-            "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            "https://studio.code.org/projects/gamelab/2RZjqfGg85Kp7HYduICk0LA3Ij5sI5hj-yexZdzFsLg/embed?nosource"
           );
         }
         playBtn += rate * 17;
