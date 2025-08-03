@@ -24,7 +24,7 @@ var verData = [
 var formattedData = "";
 for (var i = 0; i < verData.length; i++) {
   formattedData +=
-    '<div class="sectionBox"><iframe class="button" align="left" width="150" height="150" src="animated/smallplaybutton.html?i=' +
+    '<div class="sectionBox"><iframe class="button" align="left" width="150" height="150" src="../animated/smallplaybutton.html?i=' +
     verData[i][2] +
     '"></iframe><h6>v' +
     verData[i][0] +
