@@ -234,7 +234,7 @@ window.preload = function () {
         cursor(HAND);
         if (mouseWentDown("leftButton")) {
           window.open(
-            "https://studio.code.org/projects/gamelab/2RZjqfGg85Kp7HYduICk0LA3Ij5sI5hj-yexZdzFsLg/embed?nosource"
+            "https://studio.code.org/projects/gamelab/QkmsNesy7evo5ybTET-D49EdWkBFPkD4FihnQj6s8SA/embed?nosource"
           );
         }
         playBtn += rate * 17;
