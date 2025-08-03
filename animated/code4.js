@@ -114,6 +114,7 @@ window.preload = function () {
     showMobileControls(false, false, false, false);
     var rate;
     var pRate;
+    var pW = windowWidth;
     var dogs = createGroup();
     var cats = createGroup();
     var cat1 = createSprite(-400, 150);
@@ -132,6 +133,7 @@ window.preload = function () {
     play.setAnimation("playGame");
     play.setCollider("circle", 0, 0);
     play.scale = 0;
+    var playBtn = -135;
     var cframeBuffer = [];
     var dframeBuffer = [];
     function updatePositions() {
@@ -184,6 +186,15 @@ window.preload = function () {
           cats[c].setFrame(round(cframeBuffer[c]) % 8);
         }
       }
+      if (windowWidth != pW) {
+        for (var c = 0; c < cats.length; c++) {
+          cats[c].x *= windowWidth / pW;
+        }
+        for (var d = 0; d < dogs.length; d++) {
+          dogs[d].x *= windowWidth / pW;
+        }
+        pW = windowWidth;
+      }
     }
     frameRate(60);
     var start = millis();
@@ -204,36 +215,34 @@ window.preload = function () {
       play.scale *= 1.3;
       drawSprites();
       updatePositions();
-      pRate = rate;
-      if (onPage) {
-        if (mouseIsOver(play)) {
-          cursor(HAND);
-          push();
-          translate(play.x, play.y);
-          rotate(45);
-          scale(1.3);
-          noFill();
-          for (var i = -45; i <= 45; i += 9) {
-            strokeWeight(15 * sin(millis() / 3 + i));
-            if (sin(millis() / 3 + i) > 0) {
-              stroke(255, 255, 255, 255 * cos(2 * i));
-              arc(
-                0,
-                0,
-                cos(millis() / 3 + i) * (180 + 19.6 * sin(0.3 * millis())),
-                180 - 15 * sin(millis() / 3 + i) + 19.6 * sin(0.3 * millis()),
-                -90,
-                90
-              );
-            }
-          }
-          pop();
-          if (mouseWentDown("leftButton")) {
-            window.open(
-              "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            );
-          }
+      push();
+      translate(play.x, play.y);
+      rotate(45);
+      scale(1.3);
+      noFill();
+      var shiny = false;
+      for (var i = -45; i <= 45; i += 9) {
+        strokeWeight(15 * sin(playBtn / 3 + i));
+        if (sin(playBtn / 3 + i) > 0) {
+          shiny = true;
+          stroke(255, 255, 255, 255 * cos(2 * i));
+          arc(0, 0, cos(playBtn / 3 + i) * (392 * play.scale + 3.6), 392 * play.scale + 3.6 - 15 * sin(playBtn / 3 + i), -90, 90);
         }
+      }
+      pop();
+      pRate = rate;
+      if (onPage && mouseIsOver(play)) {
+        cursor(HAND);
+        if (mouseWentDown("leftButton")) {
+          window.open(
+            "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          );
+        }
+        playBtn += rate * 17;
+      } else if (!shiny) {
+        playBtn = -135;
+      } else {
+        playBtn += rate * 30;
       }
     }
     // -----
