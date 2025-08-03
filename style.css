@@ -12,17 +12,32 @@ img {
 a:link {
   color: white;
 }
+h6 > a:link {
+  color: lime;
+}
 a:visited {
   color: lightgray;
+}
+h6 > a:visited {
+  color: green;
 }
 a:hover {
   color: lime;
 }
+h6 > a:hover {
+  color: white;
+}
 a:focus {
   color: lime;
 }
+h6 > a:focus {
+  color: white;
+}
 a:active {
   color: green;
+}
+h6 > a:active {
+  color: lightgray;
 }
 body {
   background-color: black;
