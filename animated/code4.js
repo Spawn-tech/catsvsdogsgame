@@ -218,7 +218,7 @@ window.preload = function () {
       push();
       translate(play.x, play.y);
       rotate(45);
-      scale(1.3);
+      //scale(1.3);
       noFill();
       var shiny = false;
       for (var i = -45; i <= 45; i += 9) {
