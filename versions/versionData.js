@@ -1,24 +1,4 @@
 var verData = [
-  [
-    "2.0",
-    "July 1, 2026",
-    "6DT2eKOuVZAZ3CgdPl-mzxnwHOLRn689ON9xaAsFLi9",
-    [
-      "first test",
-      "yayyyyyyyyyyyyyy  askdja skjdl;aksjd;laksdjf;a lskdjf a;sldk ja;lsdkjfa;lsjajaksjdkflasdfkja;",
-      "more text",
-      "i ran out of ideas",
-      "is this too much yet?",
-      "probablynot",
-    ],
-  ],
-  [
-    "1.0",
-    "May 10, 2025",
-    "01010010110010",
-    ["Full release", "moar levels", "cool stuff"],
-  ],
-  ["0.2", "March 28, 2025", "apoeifja903-j2r-0293rj", ["Bug fixes"]],
   ["0.0", "May 30, 2025", "2RZjqfGg85Kp7HYduICk0LA3Ij5sI5hj-yexZdzFsLg", ["Initial demo release"]],
 ];
 var formattedData = "";
