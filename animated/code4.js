@@ -218,6 +218,8 @@ window.preload = function () {
       updatePositions();
       push();
       translate(play.x, play.y);
+      fill(255, 0, 0);
+      ellipse(0, 0, 200, 200);
       rotate(45);
       //scale(1.3);
       noFill();
