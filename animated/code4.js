@@ -213,6 +213,7 @@ window.preload = function () {
       play.x = width / 2;
       play.scale = 0.45 + sin(0.3 * millis()) / 20;
       //play.scale *= 1.3;
+      play.scale *= 5;
       drawSprites();
       updatePositions();
       push();
