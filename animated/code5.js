@@ -39,7 +39,7 @@ window.preload = function () {
         saved: true,
         sourceSize: { x: 392, y: 392 },
         rootRelativePath:
-          "https://cdn.glitch.global/07f978dd-567e-4e8f-b80c-384542ce47da/e93d8ae4-46f8-4b4d-a363-c90c43a5b1bf.png",
+          "../assets/playbutton.png",
       },
     },
   };
@@ -80,48 +80,47 @@ window.preload = function () {
     play.setAnimation("playGame");
     play.setCollider("circle", 0, 0);
     play.scale = 0;
+    var playBtn = -135;
     World.frameRate = 60;
     function draw() {
       if (p5Inst.mouseX != p5Inst.pmouseX || p5Inst.mouseY != p5Inst.pmouseY) {
         onPage = true;
       }
+      var rate = min(4.5, 0.06 * (millis() - p5Inst._lastFrameTime));
       cursor(AUTO);
       noStroke();
       background(20, 20, 20);
       play.scale = 0.45 + sin(0.3 * millis()) / 20;
-      play.scale *= 1.8 * 0.375;
+      play.scale *= 0.675;
       drawSprites();
-      if (onPage) {
-        if (mouseIsOver(play)) {
-          cursor(HAND);
-          push();
-          translate(play.x, play.y);
-          rotate(45);
-          scale(1.8 * 0.375);
-          noFill();
-          for (var i = -45; i <= 45; i += 9) {
-            strokeWeight(15 * sin(millis() / 3 + i));
-            if (sin(millis() / 3 + i) > 0) {
-              stroke(255, 255, 255, 255 * cos(2 * i));
-              arc(
-                0,
-                0,
-                cos(millis() / 3 + i) * (180 + 19.6 * sin(0.3 * millis())),
-                180 - 15 * sin(millis() / 3 + i) + 19.6 * sin(0.3 * millis()),
-                -90,
-                90
-              );
-            }
-          }
-          pop();
-          if (mouseWentDown("leftButton")) {
-            window.open(
-              "https://studio.code.org/projects/gamelab/" +
-                verID +
-                "/embed?nosource"
-            );
-          }
+      push();
+      translate(play.x, play.y);
+      rotate(45);
+      noFill();
+      var shiny = false;
+      for (var i = -45; i <= 45; i += 9) {
+        strokeWeight(15 * sin(playBtn / 3 + i));
+        if (sin(playBtn / 3 + i) > 0) {
+          shiny = true;
+          stroke(255, 255, 255, 255 * cos(2 * i));
+          arc(0, 0, cos(playBtn / 3 + i) * (392 * play.scale + 3.6), 392 * play.scale + 3.6 - 15 * sin(playBtn / 3 + i), -90, 90);
         }
+      }
+      pop();
+      if (onPage && mouseIsOver(play)) {
+        cursor(HAND);
+        if (mouseWentDown("leftButton")) {
+          window.open(
+            "https://studio.code.org/projects/gamelab/" +
+              verID +
+              "/embed?nosource"
+          );
+        }
+        playBtn += rate * 17;
+      } else if (!shiny) {
+        playBtn = -135;
+      } else {
+        playBtn += rate * 30;
       }
     }
     // -----
