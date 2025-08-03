@@ -221,11 +221,11 @@ window.preload = function () {
       noFill();
       var shiny = false;
       for (var i = -45; i <= 45; i += 9) {
-        strokeWeight(15 * sin(playBtn / 3 + i));
+        strokeWeight(20 * sin(playBtn / 3 + i));
         if (sin(playBtn / 3 + i) > 0) {
           shiny = true;
           stroke(255, 255, 255, 255 * cos(2 * i));
-          arc(0, 0, cos(playBtn / 3 + i) * (392 * play.scale + 3.6), 392 * play.scale + 3.6 - 15 * sin(playBtn / 3 + i), -90, 90);
+          arc(0, 0, cos(playBtn / 3 + i) * (392 * play.scale + 3.6), 392 * play.scale + 3.6 - 20 * sin(playBtn / 3 + i), -90, 90);
         }
       }
       pop();
