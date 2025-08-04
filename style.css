@@ -243,11 +243,11 @@ footer {
 }
 .link1a {
   position: absolute;
-  left: 200px;
+  margin-left: 150px;
 }
 .link2a {
   position: absolute;
-  right: 200px;
+  margin-left: 450px;
 }
 .circle {
   border-radius: 100px;
