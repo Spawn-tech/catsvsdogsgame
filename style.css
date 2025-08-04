@@ -149,7 +149,7 @@ a {
     width: 800px;
     text-align: center;
     height: auto;
-    min-height: 1070px;
+    min-height: 2000px;
     padding-left: 42.5px;
     padding-right: 42.5px;
     margin: auto;
@@ -186,6 +186,14 @@ h3 > a {
 }
 #boom {
   margin-top: 130px;
+  margin-bottom: 120px;
+}
+#beret {
+  margin-top: 160px;
+  margin-bottom: 80px;
+}
+#crown {
+  margin-top: 115px;
 }
 #end {
   margin-top: 106px;
