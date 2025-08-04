@@ -149,7 +149,7 @@ a {
     width: 800px;
     text-align: center;
     height: auto;
-    min-height: 2000px;
+    min-height: 1900px;
     padding-left: 42.5px;
     padding-right: 42.5px;
     margin: auto;
@@ -196,7 +196,10 @@ h3 > a {
   margin-top: 115px;
 }
 #triple {
-  margin-top: 95px;
+  margin-top: 85px;
+}
+#tileset {
+  margin-top: 100px;
 }
 #end {
   margin-top: 106px;
@@ -241,10 +244,11 @@ footer {
 .link1a {
   position: absolute;
   left: 200px;
-  border-radius: 100px;
 }
 .link2a {
   position: absolute;
   right: 200px;
+}
+.circle {
   border-radius: 100px;
 }
