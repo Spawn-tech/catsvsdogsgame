@@ -146,11 +146,13 @@ a {
   pointer-events: auto;
 }
 #allCredits {
-  width: 800px;
-  text-align: center;
-  height: auto;
-  min-height: 1070px;
-  margin-left: -400px;
+    width: 800px;
+    text-align: center;
+    height: auto;
+    min-height: 1070px;
+    padding-left: 42.5px;
+    padding-right: 42.5px;
+    margin: auto;
 }
 .creditImage {
   float: left;
