@@ -226,9 +226,9 @@ footer {
 }
 .link1a {
   position: absolute;
-  right: 50px;
+  left: 200px;
 }
 .link2a {
   position: absolute;
-  left: 50px;
+  right: 200px;
 }
