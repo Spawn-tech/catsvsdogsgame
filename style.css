@@ -200,7 +200,6 @@ footer {
   display: block;
   width: 200px;
   height: 200px;
-  border-radius: 100px;
 }
 #gamedev {
   font-size: 30px;
@@ -228,8 +227,10 @@ footer {
 .link1a {
   position: absolute;
   left: 200px;
+  border-radius: 100px;
 }
 .link2a {
   position: absolute;
   right: 200px;
+  border-radius: 100px;
 }
