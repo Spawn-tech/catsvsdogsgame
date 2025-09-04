@@ -19,7 +19,7 @@ window.preload = function () {
         saved: true,
         sourceSize: { x: 2913, y: 4500 },
         rootRelativePath:
-          "https://cdn.glitch.global/07f978dd-567e-4e8f-b80c-384542ce47da/8c4f66d5-5273-4348-81a8-01f61110452f.png",
+          "../assets/titel.png",
       },
     },
   };
